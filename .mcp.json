@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "inkrun": {
+      "type": "http",
+      "url": "https://mcp.inkrun.dev/mcp",
+      "headers": {
+        "Authorization": "Bearer ${INKRUN_API_KEY}"
+      }
+    }
+  }
+}

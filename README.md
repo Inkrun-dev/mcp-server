@@ -28,6 +28,7 @@ With Inkrun connected, you can ask your AI tool to:
 - [Supported clients](#supported-clients)
 - [Available tools](#available-tools)
 - [Quick setup](#quick-setup)
+- [Agent skill](#agent-skill)
 - [Quotas](#quotas)
 - [Data and security](#data-and-security)
 - [Support and feedback](#support-and-feedback)
@@ -109,6 +110,18 @@ Clients with custom-header support connect with URL + header:
 ```
 
 (Field names vary by client — e.g. VS Code uses `servers` with `"type": "http"` — but URL + header is all Inkrun needs.)
+
+## Agent skill
+
+[`skills/inkrun/`](skills/inkrun/) ships an [Agent Skill](https://code.claude.com/docs/en/skills) that teaches Claude how to use Inkrun well — when to reach for which tool, cover-page frontmatter, chart syntax, font preset keys, email delivery, and the REST fallback.
+
+Install it for Claude Code (all projects):
+
+```bash
+mkdir -p ~/.claude/skills && cp -R skills/inkrun ~/.claude/skills/inkrun
+```
+
+Or for a single project, copy it to `.claude/skills/inkrun/` in that repo. Once installed, Claude applies it automatically whenever a task involves turning Markdown into a PDF.
 
 ## Quotas
 
